@@ -1,20 +1,39 @@
 import Head from 'next/head';
-import Image from 'next/image';
+import Header from '../pages/Header';
 import styles from '../styles/Home.module.css';
-import { useUser } from '@auth0/nextjs-auth0';
+import { useSession } from 'next-auth/react';
 
-export default () => {
-  const { user, error, isLoading } = useUser();
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>{error.message}</div>;
-  if (user) {
-    return (
-      <div>
-        <h2>{user.name}</h2>
-        <p>{user.email}</p>
-        <a href='/api/auth/logout'>Logout</a>
-      </div>
-    );
-  }
-  return <a href='/api/auth/login'>Login</a>;
-}
+export default function Home() {
+  const { data: session, status } = useSession()
+  const loading = status === "loading"
+
+  return (
+    <div className={styles.container}>
+      <Head>
+        <title>Nextjs | Next-Auth</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Header />
+      <main className={styles.main}>        
+        <div className={styles.user}>
+           {loading && <div className={styles.title}>Loading...</div>}
+           {
+            session &&
+              <>
+                <h1 className={styles.title}>Welcome, {session.user.name ?? session.user.email}!</h1>
+               <p style={{ marginBottom: '10px' }}> </p> <br />
+               <img src={session.user.image} alt="" className={styles.avatar} />
+              </>
+            }
+           {
+            !session &&
+              <>
+               <p className={styles.title}>Please log in to continue</p>
+               <img src="no-user.jpg" alt="" className={styles.avatar} />               
+              </>
+           }
+         </div>
+      </main>
+    </div>
+  )
+};

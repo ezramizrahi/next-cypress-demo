@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import Layout from '../components/Layout';
+import Layout from '../../components/Layout';
 
 const prisma = new PrismaClient();
 

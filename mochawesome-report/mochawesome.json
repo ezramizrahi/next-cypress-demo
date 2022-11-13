@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-11-13T06:44:20.739Z",
-    "end": "2022-11-13T06:44:23.243Z",
-    "duration": 2504,
+    "start": "2022-11-13T08:04:28.983Z",
+    "end": "2022-11-13T08:04:31.138Z",
+    "duration": 2155,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "134788a8-7c8b-4a15-a3b4-8648629d4cb3",
+      "uuid": "79c689ef-9f51-4bf9-958f-f45a97905519",
       "title": "",
       "fullFile": "cypress/e2e/headerTests/header.spec.cy.js",
       "file": "cypress/e2e/headerTests/header.spec.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c5b82f46-5e12-4779-994c-7d899dcac317",
+          "uuid": "c294234b-0d79-4fe2-b76b-0f7ead862dee",
           "title": "SOME TEST",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should have a log in button",
               "fullTitle": "SOME TEST should have a log in button",
               "timedOut": null,
-              "duration": 1311,
+              "duration": 977,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "// Check that the search button exists in the DOM and is visible\n_Header.default.getLogInButton().should('exist');\n_Header.default.getLogInButton().should('be.visible');",
               "err": {},
-              "uuid": "faa92dbc-d1d0-4b6e-95c7-8c81d74045a0",
-              "parentUUID": "c5b82f46-5e12-4779-994c-7d899dcac317",
+              "uuid": "37416741-76f5-426e-bfee-5fd86e73e455",
+              "parentUUID": "c294234b-0d79-4fe2-b76b-0f7ead862dee",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "faa92dbc-d1d0-4b6e-95c7-8c81d74045a0"
+            "37416741-76f5-426e-bfee-5fd86e73e455"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1311,
+          "duration": 977,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

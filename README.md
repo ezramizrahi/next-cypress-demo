@@ -1,5 +1,8 @@
 A Next.js app with Cypress for end-to-end testing.
 
+## TODO
+- update github workflow yml to start fe
+
 ## Getting Started
 
 First, run the development server:

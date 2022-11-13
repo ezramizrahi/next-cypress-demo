@@ -28,6 +28,7 @@ const Card = ({
           ) : null}
         </div>
         <button
+          data-cy="favorite-button"
           type="button"
           onClick={e => {
             e.preventDefault();
@@ -44,20 +45,20 @@ const Card = ({
           />
         </button>
       </div>
-      <div className="mt-2 w-full text-gray-700 font-semibold leading-tight">
+      <div data-cy="film-title" className="mt-2 w-full text-gray-700 font-semibold leading-tight">
         {title ?? ''}
       </div>
       <ol className="mt-1 inline-flex items-center space-x-1 text-gray-500">
         <li>
-          <span>{description ?? ''}</span>
+          <span data-cy="film-description">{description ?? ''}</span>
           <span aria-hidden="true"> · </span>
         </li>
         <li>
-          <span>{director ?? ''}</span>
+          <span data-cy="film-director">{director ?? ''}</span>
           <span aria-hidden="true"> · </span>
         </li>
         <li>
-          <span>{year ?? 0}</span>
+          <span data-cy="film-year">{year ?? 0}</span>
           <span aria-hidden="true"> · </span>
         </li>
       </ol>

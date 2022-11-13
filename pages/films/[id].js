@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import Layout from '../../components/Layout';
+import PageLayout from '../../components/PageLayout';
 
 const prisma = new PrismaClient();
 
@@ -45,7 +45,7 @@ const ListedFilm = (film = null) => {
     };
 
     return (
-        <Layout>
+        <PageLayout>
             <div className="max-w-screen-lg mx-auto">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:space-x-4 space-y-4">
                 <div>
@@ -81,7 +81,7 @@ const ListedFilm = (film = null) => {
 
                 <p className="mt-8 text-lg">{film?.description ?? ''}</p>
             </div>
-        </Layout>
+        </PageLayout>
     );
 };
 

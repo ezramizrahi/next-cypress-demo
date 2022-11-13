@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client';
-import Layout from '../components/Layout';
+import PageLayout from '../components/PageLayout';
 import Grid from '../components/Grid';
 
 const prisma = new PrismaClient();
@@ -18,7 +18,7 @@ export async function getServerSideProps() {
 
 export default function Film({ films = [] }) {
   return (
-    <Layout>
+    <PageLayout>
       <h1 className="text-xl font-medium text-gray-800">
         Top-rated films
       </h1>
@@ -28,6 +28,6 @@ export default function Film({ films = [] }) {
       <div className="mt-8">
         <Grid films={films} />
       </div>
-    </Layout>
+    </PageLayout>
   );
 };

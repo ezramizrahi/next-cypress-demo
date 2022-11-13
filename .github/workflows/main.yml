@@ -28,7 +28,7 @@ jobs:
           node-version: 14.19.0
       
       - name: install dependencies
-        run: npm run install
+        run: npm ci
 
       - name: build project
         run: npm run build --if-present

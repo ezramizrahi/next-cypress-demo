@@ -40,7 +40,7 @@ const menuItems = [
   },
 ];
 
-const Layout = ({ children = null }) => {
+const PageLayout = ({ children = null }) => {
   const router = useRouter();
 
   const [showModal, setShowModal] = useState(false);
@@ -187,8 +187,8 @@ const Layout = ({ children = null }) => {
   );
 };
 
-Layout.propTypes = {
+PageLayout.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 };
 
-export default Layout;
+export default PageLayout;

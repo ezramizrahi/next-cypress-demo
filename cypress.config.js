@@ -6,7 +6,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     env: {
-      baseUrl: 'https://heroicons.com/'
+      baseUrl: 'http://localhost:3000'
     },
     video: false,
     numTestsKeptInMemory: 1,

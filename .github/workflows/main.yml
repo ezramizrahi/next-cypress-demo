@@ -30,13 +30,13 @@ jobs:
       - name: install dependencies
         run: npm install
 
-      - name: build project
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_BUCKET: ${{ secrets.SUPABASE_BUCKET }}
-        run: npm run build --if-present
+      # - name: build project
+      #   env:
+      #     DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      #     SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+      #     SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      #     SUPABASE_BUCKET: ${{ secrets.SUPABASE_BUCKET }}
+      #   run: npm run build --if-present
 
       - name: deploy_to_netlify
         id: deploy-netlify
@@ -48,6 +48,7 @@ jobs:
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_BUCKET: ${{ secrets.SUPABASE_BUCKET }}
+        run: netlify deploy --build
         with:
           args: deploy -m 'v${{ steps.package-version.outputs.current-version}} ・ ${{ github.head_ref }}'
   run-cypress-e2e-chrome100:

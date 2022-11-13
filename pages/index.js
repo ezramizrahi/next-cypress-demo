@@ -1,37 +1,33 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-import { useSession } from 'next-auth/react';
+import { PrismaClient } from '@prisma/client';
+import Layout from '../components/Layout';
+import Grid from '../components/Grid';
 
-export default function Home() {
-  const { data: session, status } = useSession()
-  const loading = status === "loading"
+const prisma = new PrismaClient();
 
+export async function getServerSideProps() {
+  // Get all films
+  const films = await prisma.film.findMany();
+  // Pass the data to the Film component
+  return {
+    props: {
+      // props for the Film component
+      films: JSON.parse(JSON.stringify(films)),
+    },
+  };
+};
+
+export default function Film({ films = [] }) {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Nextjs | Next-Auth</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className={styles.main}>        
-        <div className={styles.user}>
-           {loading && <div className={styles.title}>Loading...</div>}
-           {
-            session &&
-              <>
-                <h1 className={styles.title}>Welcome, {session.user.name ?? session.user.email}!</h1>
-               <p style={{ marginBottom: '10px' }}> </p> <br />
-               <img src={session.user.image} alt="" className={styles.avatar} />
-              </>
-            }
-           {
-            !session &&
-              <>
-               <p className={styles.title}>Please log in to continue</p>
-               <img src="no-user.jpg" alt="" className={styles.avatar} />               
-              </>
-           }
-         </div>
-      </main>
-    </div>
-  )
+    <Layout>
+      <h1 className="text-xl font-medium text-gray-800">
+        Top-rated films
+      </h1>
+      <p className="text-gray-500">
+        Explore some of the best films
+      </p>
+      <div className="mt-8">
+        <Grid films={films} />
+      </div>
+    </Layout>
+  );
 };

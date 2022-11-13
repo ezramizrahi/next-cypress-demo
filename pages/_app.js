@@ -1,14 +1,13 @@
-import React from 'react';
-import { SessionProvider } from 'next-auth/react';
-import Layout from '../components/layout'
 import '../styles/globals.css';
+import { Toaster } from 'react-hot-toast';
 
-export default function App({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   return (
-    <SessionProvider session={pageProps.session}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </SessionProvider>
+    <>
+      <Component {...pageProps} />
+      <Toaster />
+    </>
   );
-};
+}
+
+export default MyApp;

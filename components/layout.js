@@ -13,6 +13,7 @@ import {
   PlusIcon,
   SparklesIcon,
   UserIcon,
+  FilmIcon,
 } from '@heroicons/react/outline';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 
@@ -67,15 +68,15 @@ const Layout = ({ children = null }) => {
             <div className="h-full px-4 flex justify-between items-center space-x-4">
               <Link href="/">
                 <a className="flex items-center space-x-1">
-                  <SparklesIcon className="shrink-0 w-8 h-8 text-rose-500" />
-                  <span className="text-xl font-semibold tracking-wide">
-                    Film<span className="text-rose-600">App</span>
+                  <FilmIcon className="shrink-0 w-8 h-8 text-rose-500" />
+                  <span data-cy="film-app-header-text" className="text-xl font-semibold tracking-wide">
+                    <span className="text-rose-600">Film</span>App
                   </span>
                 </a>
               </Link>
               <div className="flex items-center space-x-4">
                 <Link href="/create">
-                  <a className="hidden sm:block hover:bg-gray-200 transition px-3 py-1 rounded-md">
+                  <a data-cy="add-film-link" className="hidden sm:block hover:bg-gray-200 transition px-3 py-1 rounded-md">
                     Add a film
                   </a>
                 </Link>
@@ -161,6 +162,7 @@ const Layout = ({ children = null }) => {
                   </Menu>
                 ) : (
                   <button
+                    data-cy="log-in-button"
                     type="button"
                     onClick={openModal}
                     className="ml-4 px-4 py-1 rounded-md bg-rose-600 hover:bg-rose-500 focus:outline-none focus:ring-4 focus:ring-rose-500 focus:ring-opacity-50 text-white transition"

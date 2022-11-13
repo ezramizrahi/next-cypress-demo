@@ -6,7 +6,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     env: {
-      baseUrl: 'http://ebay.com.au'
+      baseUrl: 'https://heroicons.com/'
     },
     video: false,
     numTestsKeptInMemory: 1,

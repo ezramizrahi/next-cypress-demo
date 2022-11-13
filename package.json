@@ -2,6 +2,7 @@
   "name": "next-cypress-demo",
   "version": "0.1.0",
   "private": true,
+  "author": "ezra mizrahi ezra.mizrahi@hey.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

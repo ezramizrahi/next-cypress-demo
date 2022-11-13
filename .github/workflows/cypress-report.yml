@@ -1,4 +1,4 @@
-name: Create Cypress Report and Run Postman Tests
+name: Create Cypress Report
 on:
   push:
     branches:

@@ -10,7 +10,7 @@ module.exports = defineConfig({
     },
     video: false,
     numTestsKeptInMemory: 1,
-    chromeWebSecurity: false,
+    // chromeWebSecurity: false,
     reporter: 'mochawesome',
     reporterOptions: {
       reportDir: 'mochawesome-report',

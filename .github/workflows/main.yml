@@ -46,6 +46,7 @@ jobs:
         with:
           args: deploy -m 'v${{ steps.package-version.outputs.current-version}} ・ ${{ github.head_ref }}'
   run-cypress-e2e-chrome100:
+    needs: deploy-to-netlify
     runs-on: ubuntu-latest
     container: cypress/browsers:node14.19.0-chrome100-ff99-edge
     steps:

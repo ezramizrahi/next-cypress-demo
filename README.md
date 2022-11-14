@@ -2,6 +2,7 @@ A Next.js app with Cypress for end-to-end testing.
 
 ## TODO
 - work out vercel issues
+- generate reports
 
 ## Getting Started
 

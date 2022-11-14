@@ -1,7 +1,8 @@
 A Next.js app with Cypress for end-to-end testing.
 
 ## TODO
-- update github workflow yml to start fe
+- work out vercel issues
+- generate reports
 
 ## Getting Started
 

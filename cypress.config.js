@@ -6,7 +6,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     env: {
-      baseUrl: 'http://localhost:3000'
+      baseUrl: 'https://next-cypress-demo.vercel.app/'
     },
     video: false,
     numTestsKeptInMemory: 1,

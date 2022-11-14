@@ -60,10 +60,6 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_BUCKET: ${{ secrets.SUPABASE_BUCKET }}
   run-cypress-e2e-chrome100:
     needs: deploy-to-netlify
     runs-on: ubuntu-latest

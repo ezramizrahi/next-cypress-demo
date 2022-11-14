@@ -46,7 +46,7 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_BUCKET: ${{ secrets.SUPABASE_BUCKET }}
 
-      - name: production_deployment
+      - name: Production deployment
         id: deploy-netlify
         run: |
           COMMAND="netlify deploy --prod"
@@ -65,7 +65,7 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_BUCKET: ${{ secrets.SUPABASE_BUCKET }}
   run-cypress-e2e-chrome100:
-    needs: production_deployment
+    needs: deploy-netlify
     runs-on: ubuntu-latest
     container: cypress/browsers:node14.19.0-chrome100-ff99-edge
     steps:

@@ -1,8 +1,10 @@
-A Next.js app with Cypress for end-to-end testing.
+A Next.js app with Cypress for end-to-end testing. [Visit the live app here](https://next-cypress-demo.vercel.app/)
 
 ## TODO
-- work out vercel issues
+- update app
+- update cypress tests
 - generate reports
+- update docs
 
 ## Getting Started
 

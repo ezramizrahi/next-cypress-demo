@@ -1,4 +1,4 @@
-A Next.js app with Cypress for end-to-end testing. [Visit the live app here](https://next-cypress-demo.vercel.app/)
+A Next.js app deployed with Vercel using Cypress for end-to-end testing. [Visit the live app here](https://next-cypress-demo.vercel.app/)
 
 ## TODO
 - update app

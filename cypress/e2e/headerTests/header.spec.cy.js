@@ -12,6 +12,7 @@ describe('SOME TEST', () => {
         Header.getLogInButton().should('exist');
         Header.getLogInButton().should('be.visible');
         const currurl = cy.url();
+        cy.log(currurl)
         expect(currurl).to.not.equal('https://next-cypress-demo.vercel.app/');
     });
 });

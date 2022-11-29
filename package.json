@@ -13,7 +13,7 @@
     "cleanup": "rm -fr mochawsome-report",
     "merge-reports": "npx mochawesome-merge mochawesome-report/*-report.json -o mochawesome-report/output.json",
     "html-report": "marge mochawesome-report/output.json",
-    "report:merge": "mochawesome-merge mochawesome-report/*.json > index.json",
+    "report:merge": "npx mochawesome-merge mochawesome-report/*-report.json -o index.json",
     "report:generate": "marge index.json --reportDir reports --assetsDir reports/assets --reportPageTitle index.html",
     "cleanup:e2e:report": "npm run cleanup && npm run e2e; npm run merge-reports && npm run html-report"
   },

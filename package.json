@@ -11,7 +11,7 @@
     "cypress:open": "cypress open",
     "e2e": "cypress run --browser chrome --spec \"cypress/e2e/**/*\"",
     "cleanup": "rm -fr mochawsome-report",
-    "merge-reports": "npx mochawesome-merge mochawesome-report/*-report.json > mochawesome-report/output.json",
+    "merge-reports": "npx mochawesome-merge mochawesome-report/*-report.json -o mochawesome-report/output.json",
     "html-report": "marge mochawesome-report/output.json",
     "report:merge": "mochawesome-merge mochawesome-report/*.json > index.json",
     "report:generate": "marge index.json --reportDir reports --assetsDir reports/assets --reportPageTitle index.html",

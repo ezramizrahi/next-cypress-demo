@@ -13,6 +13,7 @@ module.exports = defineConfig({
     // chromeWebSecurity: false,
     reporter: 'mochawesome',
     reporterOptions: {
+      reportFilename: "[name]-report",
       reportDir: 'mochawesome-report',
       overwrite: true,
       html: false,

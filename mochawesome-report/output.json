@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-11-29T20:13:41.001Z",
+    "end": "2022-11-29T20:13:52.988Z",
+    "duration": 1712,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e0aba5e1-adc5-4ee4-aada-800301c414fa",
+      "title": "",
+      "fullFile": "cypress/e2e/filmListTests/filmList.spec.cy.js",
+      "file": "cypress/e2e/filmListTests/filmList.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d8b1bc19-1129-4b75-ad54-96b0a33a9a82",
+          "title": "SOME TEST",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should have specific content in a card",
+              "fullTitle": "SOME TEST should have specific content in a card",
+              "timedOut": null,
+              "duration": 869,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Check that the search button exists in the DOM and is visible\n_FilmList.default.getFilmTitle().should('exist');\n_FilmList.default.getFilmDescription().should('exist');\n_FilmList.default.getFilmDirector().should('exist');",
+              "err": {},
+              "uuid": "7f3486ce-7a41-467b-bd00-ed7e4807b21e",
+              "parentUUID": "d8b1bc19-1129-4b75-ad54-96b0a33a9a82",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7f3486ce-7a41-467b-bd00-ed7e4807b21e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 869,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "9ed83cd2-84e4-44a0-a0d6-900b785fdcd9",
+      "title": "",
+      "fullFile": "cypress/e2e/headerTests/header.spec.cy.js",
+      "file": "cypress/e2e/headerTests/header.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "faff833e-e095-426d-8803-5cd1d09b4ed9",
+          "title": "SOME TEST",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should have a log in button",
+              "fullTitle": "SOME TEST should have a log in button",
+              "timedOut": null,
+              "duration": 843,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Check that the search button exists in the DOM and is visible\n_Header.default.getLogInButton().should('exist');\n_Header.default.getLogInButton().should('be.visible');\nconst currurl = cy.url();\ncy.log(currurl);\nexpect(currurl).to.not.equal('https://next-cypress-demo.vercel.app/');",
+              "err": {},
+              "uuid": "4403b26f-65c5-44e7-957c-2720fcab9d45",
+              "parentUUID": "faff833e-e095-426d-8803-5cd1d09b4ed9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4403b26f-65c5-44e7-957c-2720fcab9d45"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 843,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[name]-report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportFilename": "[name]-report",
+        "reportDir": "mochawesome-report",
+        "overwrite": true,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-11-13T08:04:28.983Z",
-    "end": "2022-11-13T08:04:31.138Z",
-    "duration": 2155,
+    "start": "2022-11-29T20:13:50.456Z",
+    "end": "2022-11-29T20:13:52.988Z",
+    "duration": 2532,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "79c689ef-9f51-4bf9-958f-f45a97905519",
+      "uuid": "9ed83cd2-84e4-44a0-a0d6-900b785fdcd9",
       "title": "",
       "fullFile": "cypress/e2e/headerTests/header.spec.cy.js",
       "file": "cypress/e2e/headerTests/header.spec.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c294234b-0d79-4fe2-b76b-0f7ead862dee",
+          "uuid": "faff833e-e095-426d-8803-5cd1d09b4ed9",
           "title": "SOME TEST",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "should have a log in button",
               "fullTitle": "SOME TEST should have a log in button",
               "timedOut": null,
-              "duration": 977,
+              "duration": 843,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "// Check that the search button exists in the DOM and is visible\n_Header.default.getLogInButton().should('exist');\n_Header.default.getLogInButton().should('be.visible');",
+              "code": "// Check that the search button exists in the DOM and is visible\n_Header.default.getLogInButton().should('exist');\n_Header.default.getLogInButton().should('be.visible');\nconst currurl = cy.url();\ncy.log(currurl);\nexpect(currurl).to.not.equal('https://next-cypress-demo.vercel.app/');",
               "err": {},
-              "uuid": "37416741-76f5-426e-bfee-5fd86e73e455",
-              "parentUUID": "c294234b-0d79-4fe2-b76b-0f7ead862dee",
+              "uuid": "4403b26f-65c5-44e7-957c-2720fcab9d45",
+              "parentUUID": "faff833e-e095-426d-8803-5cd1d09b4ed9",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "37416741-76f5-426e-bfee-5fd86e73e455"
+            "4403b26f-65c5-44e7-957c-2720fcab9d45"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 977,
+          "duration": 843,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -83,7 +83,7 @@
     "mochawesome": {
       "options": {
         "quiet": false,
-        "reportFilename": "mochawesome",
+        "reportFilename": "[name]-report",
         "saveHtml": false,
         "saveJson": true,
         "consoleReporter": "spec",
@@ -94,6 +94,7 @@
     },
     "marge": {
       "options": {
+        "reportFilename": "[name]-report",
         "reportDir": "mochawesome-report",
         "overwrite": true,
         "html": false,

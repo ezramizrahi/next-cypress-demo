@@ -10,6 +10,7 @@ on:
   pull_request:
     branches:
       - main
+  deployment_status:
 jobs:
   deploy-to-production:
     runs-on: ubuntu-latest
@@ -25,6 +26,7 @@ jobs:
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
   run-cypress-e2e-chrome100:
     needs: deploy-to-production
+    if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
     runs-on: ubuntu-latest
     container: cypress/browsers:node14.19.0-chrome100-ff99-edge
     steps:
@@ -35,6 +37,8 @@ jobs:
           $(npm bin)/cypress verify
       - name: Run Cypress tests
         run: npm run e2e
+        env:
+          CYPRESS_BASE_URL: ${{ github.event.deployment_status.target_url }}
         continue-on-error: true
 
       - name: Merge test results into one

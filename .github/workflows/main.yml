@@ -1,4 +1,4 @@
-name: Deploy and run Cypress E2E tests
+name: deploy app and run cypress e2e tests on preview url
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}

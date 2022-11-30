@@ -1,4 +1,3 @@
-
 import Common from '../../support/PageObjects/Common';
 import Header from '../../support/PageObjects/Header';
 
@@ -12,5 +11,8 @@ describe('SOME TEST', () => {
         // Check that the search button exists in the DOM and is visible
         Header.getLogInButton().should('exist');
         Header.getLogInButton().should('be.visible');
+        const currurl = cy.url();
+        cy.log(currurl)
+        expect(currurl).to.not.equal('https://next-cypress-demo.vercel.app/');
     });
 });

@@ -1,4 +1,3 @@
-
 import Common from '../../support/PageObjects/Common';
 import FilmList from '../../support/PageObjects/FilmList';
 
